@@ -1,185 +1,42 @@
-# MySQL-Project-DATA-MANAGEMENT-
+Project Title: IPL Data Management System using MySQL
 
-CREATE DATABASE IPL_DATA_MANAGEMENT;
-USE IPL_DATA_MANAGEMENT;
+Introduction:
+The IPL (Indian Premier League) Data Management project is a comprehensive system designed to store, manage, and retrieve data related to one of the most popular and widely-followed cricket leagues in the world - the IPL. This project leverages the power of MySQL, a relational database management system, to efficiently handle the vast amount of data generated during each IPL season.
 
-CREATE TABLE DATA_01(
-SERIAL_NO INT NOT NULL,
-FIRST_NAME CHAR(20) NOT NULL,
-LAST_NAME CHAR(20) NOT NULL,
-AGE INT NOT NULL,
-JERSEY_NO INT NOT NULL,
-PRIMARY KEY (SERIAL_NO));
+Objective:
+The primary objective of the IPL Data Management project is to create a robust and user-friendly database system that can store various types of data related to IPL, such as player statistics, match results, team information, and more. By using MySQL as the database engine, the project aims to achieve the following goals:
 
-select * from DATA_01;
+1. Data Storage: MySQL provides a structured and organized way to store data. It allows the project to store vast amounts of IPL-related data in tables with predefined schemas, ensuring data integrity and consistency.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (01,'VIRAT','KOHLI',33,18);
+2. Data Retrieval: The project enables users to retrieve specific data, such as player records, team performance, or historical match statistics, by using SQL queries. This makes it easier for analysts, fans, and administrators to access the information they need.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (02,'AB','DE VILLIERS',38,17);
+3. Data Analytics: The MySQL database is integrated with data analytics tools, which allows for the generation of reports, charts, and graphs to analyze trends and make data-driven decisions. This is especially beneficial for team management and cricket enthusiasts.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (03,'MOHAMMED','SIRAJ',28,73), (04,'FAF','DU PLESSIS',38,13);
+Key Features:
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (05,'GLENN','MAXWELL',33,32), (06,'DINESH','KARTIK',37,19), (07,'HARSHAL','PATEL',31,09), (08,'JOSH','HAZLEWOOD',31,38), (09,'WANINDU','HASARANGA',25,49),
-(10,'SHAHBAZ','AHMED',27,21), (11,'ROHIT','SHARMA',35,45), (12,'ISHAN','KISHAN',24,32), (13,'KIERON','POLLARD',35,55), (14,'DEWALD','BREWIS',19,17),
-(15,'DANIEL','SAMS',29,95);
+1. Player Profiles: Store detailed information about IPL players, including their name, age, playing position, and career statistics. MySQL efficiently manages player data and allows for easy retrieval and updating of records.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (16,'JOFRA','ARCHER',27,22), (17,'TIM','DAVID',26,85), (18,'FABIAN','ALLEN',27,97), (19,'SURYAKUMAR','YADAV',32,63), (20,'TILAK','VERMA',19,05),
-(21,'MS','DHONI',41,07), (22,'RAVINDRA','JADEJA',33,08), (23,'MOEEN','ALI',35,18), (24,'ROBIN','UTHAPPA',36,77), (25,'DWAYNE','BRAVO',38,47),
-(26,'DEVON','CONWAY',31,88), (27,'MITCHELL','SANTNER',30,74), (28,'DWAINE','PRETORIUS',33,29), (29,'ADAM','MILNE',30,20), (30,'CHRIS','JORDAN',33,34);
+2. Team Records: Maintain records of IPL teams, including their names, owners, home stadiums, and historical performance. This information can be essential for team management and fans.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (31,'RISHABH','PANT',24,17), (32,'SHARDUL','THAKUR',30,54), (33,'DAVID','WARNER',35,31), (34,'MITCHELL','MARSH',30,08), (35,'ANRICH','NORTJE',28,02),
-(36,'MUSTAFIZUR','RAHIM',27,90), (37,'ROVMAN','POWELL',29,52), (38,'LUNGI','NGIDI',26,22), (39,'TIM','SIEFERT',27,36), (40,'PRITHWI','SHAW',22,100),
-(41,'SHREYAS','IYER',27,41), (42,'ANDRE','RUSELL',34,12), (43,'NITISH','RANA',28,27), (44,'PAT','CUMMINS',29,30), (45,'SUNIL','NARINE',34,74),
-(46,'SHELDON','JACKSON',35,21), (47,'SAM','BILLINGS',31,07), (48,'ALEX','HALES',33,10), (49,'MOHAMMED','NABI',37,07), (50,'TIM','SOUTHEE',33,08),
-(51,'KL','RAHUL',30,01), (52,'AVESH','KHAN',25,05), (53,'MARCUS','STOINIS',33,17), (54,'JASON','HOLDER',30,98), (55,'KRUNAL','PANDYA',31,36),
-(56,'MARK','WOOD',32,33), (57,'QUINTON','DE KOCK',29,12), (58,'DEEPAK','HOODA',27,57), (59,'DUSHMANTA','CHAMEERA',30,05), (60,'EVIN','LEWIS',30,17),
-(61,'MAYANK','AGARWAL',31,16), (62,'LIAM','LIVINGSTONE',29,23), (63,'KAGISO','RABADA',27,25), (64,'JONNY','BAIRSTOW',32,51), (65,'ODEAN','SMITH',25,58),
-(66,'RAHUL','CHAHAR',23,28), (67,'ARSHDEEP','SINGH',23,02), (68,'HARPREET','BRAR',23,95), (69,'SHAHRUKH','KHAN',27,35), (70,'SHIKHAR','DHAWAN',36,42);
+3. Match Data: Record and manage data related to each IPL match, including venue, date, teams, toss result, and match results. This feature facilitates easy access to match histories.
 
-INSERT INTO DATA_01 (SERIAL_NO, FIRST_NAME, LAST_NAME, AGE, JERSEY_NO)
-VALUES (71,'BHANUKA','RAJPAKSA',30,54), (72,'SANDEEP','SHARMA',29,66), (73,'KANE','WILLIAMSON',32,22), (74,'NICHOLAS','POORAN',26,29), (75,'WASHINGTON','SUNDAR',22,55),
-(76,'BHUVNESHWAR','KUMAR',32,15), (77,'MARCO','JANSEN',22,70), (78,'ABDUL','SAMAD',20,18), (79,'UMRAN','MALIK',22,98), (80,'AIDEN','MARKRAM',27,04),
-(81,'SHREYAS','GOPAL',29,19), (82,'FAZALHAQ','FAROOQI',22,05), (83,'ABHISHEK','SHARMA',22,04), (84,'RAHUL','TRIPATHI',31,52), (85,'GLENN','PHILLIPS',25,23), (86,'SANJU','SAMSON',27,09),
-(87,'JOS','BUTTLER',32,63), (88,'SHIMRON','HETMYER',25,189), (89,'TRENT','BOULT',33,18), (90,'PRASIDH','KRISHNA',26,24), (91,'DEVDUTT','PADIKKAL',22,37),
-(92,'YUZVENDRA','CHAHAL',32,06), (93,'RAVICHANDRAN','ASHWIN',36,99), (94,'YASHASWI','JAISWAL',20,19), (95,'RIYAN','PARAG',20,03), (96,'NAVDEEP','SAINI',29,96),
-(97,'DARYL','MITCHELL',31,75), (98,'JAMES','NEESHAM',32,50), (99,'OBED','MCCOY',25,61), (100,'NATHAN','COULTERNILE',34,13);
+4. Statistics and Analytics: Utilize MySQL's querying capabilities to generate various statistical reports, such as batting and bowling averages, team rankings, and head-to-head comparisons. These statistics can help fans and team management make informed decisions.
 
-CREATE TABLE DATA_02(
-PLAYER_ID INT NOT NULL,
-PLAYER_ORIGIN CHAR(20) NOT NULL,
-PLAYER_ROLE CHAR(20) NOT NULL,
-BASE_PRICE VARCHAR(20) NOT NULL,
-CURRENT_FRANCHISE CHAR(20) NOT NULL,
-PRIMARY KEY (PLAYER_ID));
- 
-SELECT * FROM DATA_02;
+5. Security and Backup: Implement robust security measures to protect the integrity of the data and schedule regular backups to prevent data loss.
 
-INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
-VALUES (01,'INDIA','BATSMEN','2 CR','RCB'), (02,'SOUTH AFRICA','BATSMEN/WK','2 CR','RCB'), (03,'INDIA','FAST BOWLER','20 LAKH','RCB'), (04,'SOUTH AFRICA','BATSMEN','1 CR','RCB'), (05,'AUSTRALIA','ALL ROUNDER','1 CR','RCB'),
-(06,'INDIA','BATSMEN/WK','20 LAKH','RCB'), (07,'INDIA','FAST BOWLER','20 LAKH','RCB'), (08,'AUSTRALIA','FAST BOWLER','10 LAKH','RCB'), (09,'SRI LANKA','SPINNER','20 LAKH','RCB'), (10,'INDIA','ALL ROUNDER','20 LAKH','RCB'),
-(11,'INDIA','BATSMEN','2 CR','MI'), (12,'INDIA','BATSMEN/WK','20 LAKH','MI'), (13,'WEST INDIES','ALL ROUNDER','20 LAKH','MI'), (14,'SOUTH AFRICA','BATSMEN','20 LAKH','MI'), (15,'AUSTRALIA','ALL ROUNDER','20 LAKH','MI'), (16,'ENGLAND','FAST BOWLER','10 LAKH','MI'),
-(17,'AUSTRALIA','ALL ROUNDER','20 LAKH','MI'), (18,'WEST INDIES','ALL ROUNDER','20 LAKH','MI'), (19,'INDIA','BATSMEN','1 CR','MI'), (20,'INDIA','BATSMEN','10 LAKH','MI'), (21,'INDIA','BATSMEN/WK','2 CR','CSK'),
-(22,'INDIA','ALL ROUNDER','1 CR','CSK'), (23,'ENGLAND','ALL ROUNDER','1 CR','CSK'), (24,'INDIA','BATSMEN/WK','20 LAKH','CSK'), (25,'WEST INDIES','ALL ROUNDER','1 CR','CSK');
+Benefits:
 
-INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
-VALUES (26,'NEW ZEALAND','BATSMEN/WK','20 LAKH','CSK'), (27,'NEW ZEALAND','SPINNER','20 LAKH','CSK'), (28,'SOUTH AFRICA','FAST BOWLER','20 LAKH','CSK'), (29,'NEW ZEALAND','ALL ROUNDER','20 LAKH','CSK'), (30,'ENGLAND','ALL ROUNDER','20 LAKH','CSK'),
-(31,'INDIA','BATSMEN/WK','1 CR','DC'), (32,'INDIA','FAST BOWLER','20 LAKH','DC'), (33,'AUSTRALIA','BATSMEN','2 CR','DC'), (34,'AUSTRALIA','ALL ROUNDER','20 LAKH','DC'), (35,'SOUTH AFRICA','FAST BOWLER','10 LAKH','DC'),
-(36,'BANGLADESH','FAST BOWLER','20 LAKH','DC'), (37,'WEST INDIES','BATSMEN','20 LAKH','DC'), (38,'SOUTH AFRICA','ALL ROUNDER','20 LAKH','DC'), (39,'NEW ZEALAND','BATSMEN','10 LAKH','DC'), (40,'INDIA','BATSMEN','1 CR','DC'), (41,'INDIA','BATSMEN','1 CR','KKR'),
-(42,'WEST INDIES','ALL ROUNDER','20 LAKH','KKR'), (43,'INDIA','BATSMEN/WK','20 LAKH','KKR'), (44,'AUSTRALIA','ALL ROUNDER','20 LAKH','KKR'), (45,'WEST INDIES','ALL ROUNDER','20 LAKH','KKR'), (46,'INDIA','BATSMEN/WK','10 LAKH','KKR'),
-(47,'ENGLAND','BATSMEN','20 LAKH','KKR'), (48,'ENGLAND','BATSMEN','20 LAKH','KKR'), (49,'AFGHANISTAN','ALL ROUNDER','20 LAKH','KKR'), (50,'NEW ZEALAND','FAST BOWLER','20 LAKH','KKR'), (51,'INDIA','BATSMEN/WK','1 CR','LSG'),
-(52,'INDIA','FAST BOWLER','20 LAKH','LSG'), (53,'AUSTRALIA','ALL ROUNDER','20 LAKH','LSG'), (54,'WEST INDIES','ALL ROUNDER','20 LAKH','LSG'), (55,'INDIA','ALL ROUNDER','20 LAKH','LSG');
+The IPL Data Management project, powered by MySQL, offers several advantages:
 
-INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
-VALUES (56,'ENGLAND','ALL ROUNDER','20 LAKH','LSG'), (57,'SOUTH AFRICA','BATSMEN/WK','20 LAKH','LSG'), (58,'INDIA','BATSMEN','20 LAKH','LSG'), (59,'SRI LANKA','FAST BOWLER','10 LAKH','LSG'), (60,'WEST INDIES','BATSMEN','10 LAKH','LSG'),
-(61,'INDIA','BATSMEN','20 LAKH','PK'), (62,'ENGLAND','ALL ROUNDER','20 LAKH','PK'), (63,'SOUTH AFRICA','BOWLER','20 LAKH','PK'), (64,'ENGLAND','BATSMEN/WK','20 LAKH','PK'), (65,'WEST INDIES','FAST BOWLER','10 LAKH','PK'),
-(66,'INDIA','SPINNER','10 LAKH','PK'), (67,'INDIA','FAST BOWLER','10 LAKH','PK'), (68,'INDIA','SPINNER','10 LAKH','PK'), (69,'INDIA','BATSMEN','10 LAKH','PK'), (70,'INDIA','BATSMEN','20 LAKH','PK'), (71,'SRI LANKA','BATSMEN','20 LAKH','PK'),
-(72,'INDIA','FAST BOWLER','20 LAKH','PK'), (73,'NEW ZEALAND','BATSMEN','1 CR','SRH'), (74,'WEST INDIES','BATSMEN/WK','20 LAKH','SRH'), (75,'INDIA','ALL ROUNDER','20 LAKH','SRH'), (76,'INDIA','BOWLER','20 LAKH','SRH'),
-(77,'SOUTH AFRICA','FAST BOWLER','20 LAKH','SRH'), (78,'INDIA','BATSMEN','10 LAKH','SRH'), (79,'INDIA','FAST BOWLER','10 LAKH','SRH'), (80,'SOUTH AFRICA','BATSMEN','20 LAKH','SRH');
+1. Centralized Data Repository: All IPL-related data is stored in one place, making it easy to manage and access.
 
- INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
-VALUES (81,'INDIA','SPINNER','10 LAKH','SRH'), (82,'AFGHANISTAN','BATSMEN','10 LAKH','SRH'), (83,'INDIA','BATSMEN','10 LAKH','SRH'), (84,'INDIA','BATSMEN/WK','20 LAKH','SRH'), (85,'NEW ZEALAND','BATSMEN','20 LAKH','SRH');
- 
- INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
- VALUES (86,'INDIA','BATSMEN/WK','1 CR','RR'), (87,'ENGLAND','BATSMEN/WK','1 CR','RR'), (88,'WEST INDIES','BATSMEN','20 LAKH','RR'), (89,'NEW ZEALAND','FAST BOWLER','10 LAKH','RR'), (90,'INDIA','FAST BOWLER','20 LAKH','RR');
- 
-INSERT INTO DATA_02 (PLAYER_ID, PLAYER_ORIGIN, PLAYER_ROLE, BASE_PRICE, CURRENT_FRANCHISE)
-VALUES(91,'INDIA','BATSMEN','20 LAKH','RR'), (92,'INDIA','SPINNER','20 LAKH','RR'), (93,'INDIA','SPINNER','20 LAKH','RR'), (94,'INDIA','BATSMEN','20 LAKH','RR'), (95,'INDIA','BATSMEN','20 LAKH','RR'), (96,'INDIA','FAST BOWLER','20 LAKH','RR'),
-(97,'NEW ZEALAND','BATSMEN','20 LAKH','RR'), (98,'NEW ZEALAND','ALL ROUNDER','20 LAKH','RR'), (99,'WEST INDIES','FAST BOWLER','20 LAKH','RR'), (100,'AUSTRALIA','FAST BOWLER','20 LAKH','RR');
+2. Data Consistency: MySQL enforces data integrity, ensuring that the stored information is accurate and reliable.
 
-SELECT * FROM DATA_01; 
-select * from data_02;
+3. Data-Driven Insights: Users can gain valuable insights into IPL trends, player performance, and team strategies through data analysis and reporting.
 
-select first_name, last_name, age
-from data_01;
+4. Scalability: MySQL is highly scalable, enabling the addition of more data and features as the IPL evolves.
 
-select first_name, jersey_no 
-from data_01
-where age<30;
+5. Enhanced Decision-Making: The availability of historical data and statistics empowers teams and administrators to make informed decisions.
 
-select first_name, last_name, jersey_no
-from data_01 limit 20;
-
-SELECT SUM(JERSEY_NO)
-FROM DATA_01
-WHERE LAST_NAME='SHARMA';
-
-select first_name, last_name 
-from data_01
-where first_name like'v%';
-
-select first_name, last_name 
-from data_01
-where first_name not like'%a';
-
-select player_origin, player_role, base_price
-from data_02
-order by base_price asc;
-
-select player_origin, player_role, base_price, current_franchise
-from data_02
-order by current_franchise desc;
-
-select first_name, last_name
-from data_01
-where length(first_name)>5;
-
-select serial_no, substring(first_name,1,4), jersey_no
-from data_01;
-
-select player_id, current_franchise, player_role
-from data_02
-where player_role='all rounder' or player_role='batsmen';
-
-select player_id, current_franchise, player_role
-from data_02
-where player_role='batsmen' and current_franchise='rr';
-
-select * from data_01
-where age in (22,24,25);
-
-select lower(first_name) as pname, lower(last_name) as sname, jersey_no
-from data_01;
-
-select max(base_price), min(base_price)
-from data_02;
-
-select sum(base_price)
-from data_02
-where current_franchise='rcb';
-
-select avg(base_price)
-from data_02
-where player_origin='india';
-
-select count(player_id)
-from data_02
-where player_origin='England';
-
-select data_01.serial_no, data_01.first_name, data_01.last_name, data_02.player_id, data_02.player_origin
- from data_01 
- inner join data_02
- on data_01.serial_no=data_02.player_id;
- 
- select data_01.serial_no, data_01.first_name, data_01.last_name, data_02.player_id, data_02.player_origin
- from data_01 
- left join data_02
- on data_01.serial_no=data_02.player_id;
-
-select data_01.serial_no, data_01.first_name, data_01.last_name, data_02.player_id, data_02.player_origin
- from data_01 
- right join data_02
- on data_01.serial_no=data_02.player_id;
-
-SELECT data_01.SERIAL_NO, data_01.FIRST_NAME, data_01.LAST_NAME, data_02.PLAYER_ID, data_02.PLAYER_ORIGIN, data_02.PLAYER_ROLE
- FROM data_01 LEFT JOIN data_02 
- ON data_01.SERIAL_NO=data_02.PLAYER_ID
- UNION SELECT data_01.SERIAL_NO, data_01.FIRST_NAME, data_01.LAST_NAME, data_02.PLAYER_ID, data_02.PLAYER_ORIGIN, data_02.PLAYER_ROLE
- FROM data_01 
- RIGHT JOIN data_02
- ON data_01.SERIAL_NO=data_02.PLAYER_ID;
+Conclusion:
+The IPL Data Management project, leveraging MySQL, provides a robust and efficient solution for storing, managing, and analyzing IPL-related data. This system benefits cricket fans, team management, and analysts by offering easy access to comprehensive IPL statistics and insights. It ensures that the IPL remains an exciting and data-rich cricket league.
